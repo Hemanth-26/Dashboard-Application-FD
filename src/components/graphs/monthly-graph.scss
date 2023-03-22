@@ -1,0 +1,23 @@
+.graph-con {
+  .graph-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      color: #6c7175;
+      font-size: 2rem !important;
+      line-height: 3rem;
+      font-weight: 200;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    p {
+      color: #6c7175;
+      font-size: 1.5rem !important;
+      line-height: 3rem;
+      font-weight: 200;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+  }
+}

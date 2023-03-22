@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="UMF_pending_enquiries" transform="translate(18393 22621)">
+    <g id="soft_bg" data-name="soft bg" transform="translate(-18405 -22633)" opacity="0">
+      <rect id="soft_bg-2" data-name="soft bg" width="32" height="32" transform="translate(12 12)" fill="#fff"/>
+    </g>
+    <g id="messages-bubble-question" transform="translate(-18388 -22616)">
+      <path id="Shape_149" data-name="Shape 149" d="M777.945,309.25a10.485,10.485,0,0,1,8.917,16.025l3.083,6.475-6.474-3.084a10.5,10.5,0,1,1-5.526-19.416Z" transform="translate(-767.425 -309.25)" fill="none" stroke="#ff808b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Shape_229" data-name="Shape 229" d="M776.2,317.058a3,3,0,1,1,4,2.829,1.5,1.5,0,0,0-1,1.414v.257" transform="translate(-768.453 -309.25)" fill="none" stroke="#ff808b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Shape_230" data-name="Shape 230" d="M779.2,324.558a.375.375,0,1,0,.375.375.375.375,0,0,0-.375-.375" transform="translate(-768.453 -309.25)" fill="none" stroke="#ff808b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

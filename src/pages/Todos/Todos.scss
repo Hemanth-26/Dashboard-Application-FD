@@ -1,0 +1,41 @@
+.todo-page-container {
+  .todo-date-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .todo-add-con {
+    /* width: 50rem; */
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .todo-input {
+      width: 20rem;
+      margin: 0;
+    }
+  }
+  .todo-list-con {
+    .todo-list-title {
+      color: #6c7175;
+      font-size: 1.2rem;
+      line-height: 3rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    p {
+      color: #6c7175;
+    }
+    .todo-list {
+      
+      .edit-icon-btn,
+      .delete-icon-btn {
+        margin: 0 0.2rem !important;
+      }
+    }
+  }
+}

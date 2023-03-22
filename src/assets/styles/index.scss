@@ -1,0 +1,307 @@
+@import "./bootstrap-utils.scss";
+@import "./utility.scss";
+@import "./variables.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #EAE7DC !important;
+  font-family: "Montserrat", sans-serif;
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    font-size: 8px !important;
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    font-size: 10px !important;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    font-size: 12px !important;
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    font-size: 14px !important;
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    font-size: 16px !important;
+  }
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("../fonts/Montserrat-Bold.otf"), format("otf");
+}
+
+@font-face {
+  font-family: "montserrat-light";
+  src: url("../fonts/Montserrat-Light.otf"), format("otf");
+}
+
+@font-face {
+  font-family: "montserrat-medium";
+  src: url("../fonts/Montserrat-Medium.otf"), format("otf");
+}
+
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("../fonts/Montserrat-Regular.otf"), format("otf");
+}
+
+@font-face {
+  font-family: "montserrat-semi-bold";
+  src: url("../fonts/Montserrat-SemiBold.otf"), format("otf");
+}
+
+// Generic
+
+a,
+a:hover {
+  color: $primary-clr;
+  text-decoration: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $font-clr-1;
+  // -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 500000s ease-in-out 0s;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  // -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+// /* Firefox */
+// input[type=number] {
+//   -moz-appearance: textfield;
+// }
+
+// /* width */
+// ::-webkit-scrollbar {
+//   // width: 10px;
+//   width: 8px;
+//   // background-color: #1C2125;
+//   background-color: #272e36;
+//   border-radius: 10px;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px #272e36;
+//   border-radius: 10px;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: #535353;
+//   border-radius: 10px;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #535353;
+// }
+
+.otp {
+  width: 2.5rem !important;
+  display: inline-block;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 2rem;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  input {
+    &:focus{
+      outline: 1px solid #E85A4F!important;
+    }
+  }
+}
+.otp-focus {
+  box-shadow: 0px 0px 7px 0px #606e86 !important;
+}
+
+.txt-grey-drk {
+  color: #E98074;
+}
+
+.required{
+  label:after{
+    content: "*";
+    color: red;
+  }
+}
+
+.loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #000, $alpha: 0.8);
+  width: 100%;
+  height: 100vh;
+  z-index: 1400;
+}
+
+// Video preview customization
+
+.video-js .vjs-play-progress {
+  background-color: $primary-clr !important;
+}
+
+.video-js .vjs-progress-holder {
+  height: 0.6em !important;
+}
+
+.video-js .vjs-play-progress:before {
+  font-size: 1.5em !important;
+}
+
+.video-js.vjs-fluid {
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.vjs-poster {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.video-js .vjs-progress-control:hover .vjs-progress-holder {
+  font-size: inherit !important;
+}
+
+.vjs-fluid {
+  padding-top: 56.25% !important;
+}
+.fhd-indicator {
+  width: 1rem;
+}
+.close {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+  top: -2.4rem;
+  right: -2.4rem;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.recharts-tooltip-cursor {
+  fill-opacity: 0.2;
+}
+.custom-tooltip {
+  background-color: #272e36;
+  box-shadow: 0px 0px 0.5rem #00000040;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  min-width: 5rem;
+}
+.recharts-tooltip-item {
+  text-transform: capitalize;
+}
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: #E85A4F !important;
+}
+
+// input:not(input[name="password"]) {
+//   border-top-left-radius: 10px !important;
+//   border-bottom-left-radius: 10px !important;
+//   border-top-right-radius: 10px !important;
+//   border-bottom-right-radius: 10px !important;
+// }
+
+input:focus{
+  outline: 3px solid #E85A4F!important;
+}
+
+input:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.password-input-group {
+  flex-wrap: nowrap !important;
+  input {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .form-floating{
+    width: 100%;
+  }
+}
+.eye-btn {
+  display: flex;
+  align-items: center;
+  background-color: #fff !important;
+  color: #00b8a0 !important;
+  border: 1px solid #fff !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  height: calc(3.5rem + 2px) !important;
+  padding: 1.2rem !important;
+  box-shadow: none !important;
+  // font-size: 1rem;
+  font: normal normal 900 1.2rem/2rem Montserrat !important;
+}
+.font-error{
+  color: $error-red !important;
+}
+.main_container{
+  width: calc(100% - 5rem);
+  // margin-right: 1rem;
+}
+.app-container {
+  height: 100vh;
+}
+.reports-filter-container {
+  max-width: 16rem;
+  width: 100%;
+  border-right: 1px solid #AFAFAF;
+}
+.body_container {
+  overflow: auto;
+}
+.logo_icon{
+  width: 4rem;
+  height: 4rem;
+}

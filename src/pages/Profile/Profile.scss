@@ -1,0 +1,28 @@
+.login_box{
+    width: 35rem;
+    // height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35rem;
+    
+
+    // .form-floating > .form-control {
+    //   padding: 0.75rem;
+    // }
+    // .form-floating > .form-control,
+    // .form-floating > .form-select {
+    //   height: calc(3rem + 2px);
+    //   line-height: 1.25;
+    // }
+    // .form-floating > label {
+    //   padding: 0.75rem;
+    // }
+  }
