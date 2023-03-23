@@ -11,6 +11,7 @@ import {
   FormHelperText,
   PasswordTextField,
 } from "../../components/index";
+import Logo from "../../assets/images/logo.png";
 import "../../assets/styles/pages/Login/Login.scss";
 
 function Login() {
@@ -56,7 +57,6 @@ function Login() {
         enqueueSnackbar(error.data.message, { variant: "error" });
       });
   };
-  
 
   return (
     <div className="login_cont container">
@@ -64,6 +64,9 @@ function Login() {
         <div className="col">
           <div className="login_box">
             <form onSubmit={handleSubmit(onSubmitUserData)}>
+              <div className="d-flex justify-content-center">
+                <img src={Logo} alt="Logo" className="logo_img" />
+              </div>
               <h4 className="text-center mt-2 mb-3" color="secondary">
                 Log in to Dashboard
               </h4>

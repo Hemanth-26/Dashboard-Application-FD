@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
+import Logo from "../../assets/images/logo.png";
 import Header from "./Header";
 import SidebarList from "./SidebarList";
 import useWidthDimensions from "../../utils/useWidthDimensions";
@@ -112,13 +113,16 @@ const MiniDrawer = (props) => {
   }, [width]);
 
   return (
-    <Box sx={{ display: "flex", width: '100%' }}>
+    <Box sx={{ display: "flex", width: "100%" }}>
       <CssBaseline />
 
       <Header AppBar={AppBar} open={open} handleDrawerOpen={handleDrawerOpen} />
 
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
+          <div className="w-100 d-flex justify-content-center">
+            <img src={Logo} alt="Logo" className="logo_icon" />
+          </div>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
@@ -132,7 +136,11 @@ const MiniDrawer = (props) => {
         <SidebarList open={open} />
       </Drawer>
 
-      <Box component="main" sx={{ flexGrow: 1, padding: '2rem'}} onClick={handleDrawerClose}>
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, padding: "2rem" }}
+        onClick={handleDrawerClose}
+      >
         <DrawerHeader />
 
         {children}

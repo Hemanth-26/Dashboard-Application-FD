@@ -71,7 +71,10 @@ function Header({ AppBar, open, handleDrawerOpen }) {
         <Box sx={{ flexGrow: 0, marginRight: "1rem" }}>
           <Tooltip title="Open settings">
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt={localStorage.getItem("user_name") || "T"} src="/static/images/avatar/2.jpg" />
+              <Avatar
+                alt={localStorage.getItem("user_name") || "T"}
+                src="/static/images/avatar/2.jpg"
+              />
             </IconButton>
           </Tooltip>
           <Menu
@@ -91,7 +94,13 @@ function Header({ AppBar, open, handleDrawerOpen }) {
             onClose={handleCloseUserMenu}
           >
             {settings.map((setting) => (
-              <MenuItem key={setting.name} onClick={() => {handleCloseUserMenu(); navigate(setting.route)}}>
+              <MenuItem
+                key={setting.name}
+                onClick={() => {
+                  handleCloseUserMenu();
+                  navigate(setting.route);
+                }}
+              >
                 {setting.icon}
                 <Typography textAlign="center">{setting.name}</Typography>
               </MenuItem>
