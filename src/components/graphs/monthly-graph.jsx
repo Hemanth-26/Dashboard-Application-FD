@@ -26,7 +26,7 @@ function MonthlyGraph(props) {
     data.push(dashboardGraph?.monthlyLogin[element] || 0);
   });
 
-  console.log("data", data);
+  // console.log("data", data);
 
   const options = {
     chart: {

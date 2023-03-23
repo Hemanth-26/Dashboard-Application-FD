@@ -134,7 +134,7 @@ function Todos() {
   };
 
   const deleteTodoListData = (id) => {
-    console.log("deleteTodoListData", id);
+    // console.log("deleteTodoListData", id);
     storeHandler(actions.SHOW_LOADER, true);
     AuthServices.removeTodo(id)
       .then((response) => {

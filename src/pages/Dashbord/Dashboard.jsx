@@ -16,13 +16,13 @@ function Dashboard() {
   const storeHandler = (type, payload) => dispatch({ type, payload });
 
   const [dashData, setDashData] = useState();
-  console.log("dashData", dashData);
+  // console.log("dashData", dashData);
 
   useEffect(() => {
     storeHandler(actions.SHOW_LOADER, true);
     AuthServices.dashboard()
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         storeHandler(actions.SHOW_LOADER, false);
         setDashData(response);
       })

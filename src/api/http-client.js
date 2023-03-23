@@ -18,7 +18,7 @@ const onError = async ({ response }) => {
     // localStorage.clear()
     // window.location.reload();
     Logout();
-    console.log(data)
+    // console.log(data)
   }
   return Promise.reject(response)
 };
