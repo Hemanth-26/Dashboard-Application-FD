@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -29,10 +29,11 @@ const dashboard = [
 ];
 
 function SidebarList({ open }) {
+  const location = useLocation();
   const navigate = useNavigate();
 
-  const location = window.location.pathname.split("/").slice(-1)[0];
-  //   console.log(location);
+  // const location = window.location.pathname.split("/").slice(-1)[0];
+    // console.log(location);
 
   return (
     <>
@@ -45,7 +46,7 @@ function SidebarList({ open }) {
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
               }}
-              selected={data.url === `/${location}`}
+              selected={data.url === location.pathname}
               onClick={() => navigate(data.url)}
             >
               <ListItemIcon
