@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/Dashboard-Application-FD/static/css/main.3b8b149a.css",
-    "main.js": "/Dashboard-Application-FD/static/js/main.5e8d9467.js",
+    "main.css": "/Dashboard-Application-FD/static/css/main.a6bab755.css",
+    "main.js": "/Dashboard-Application-FD/static/js/main.9769c50f.js",
     "static/js/787.b085e314.chunk.js": "/Dashboard-Application-FD/static/js/787.b085e314.chunk.js",
     "static/media/Montserrat-Bold.otf": "/Dashboard-Application-FD/static/media/Montserrat-Bold.a6bc51efd33e2f7f1b95.otf",
     "static/media/Montserrat-SemiBold.otf": "/Dashboard-Application-FD/static/media/Montserrat-SemiBold.b4f6721ba1a251742ea6.otf",
     "static/media/Montserrat-Medium.otf": "/Dashboard-Application-FD/static/media/Montserrat-Medium.4b4a4b36283ebeb2cf89.otf",
     "static/media/Montserrat-Regular.otf": "/Dashboard-Application-FD/static/media/Montserrat-Regular.65bc44fbf8204991497c.otf",
     "static/media/Montserrat-Light.otf": "/Dashboard-Application-FD/static/media/Montserrat-Light.8c76b7212dc892314701.otf",
+    "static/media/logo.png": "/Dashboard-Application-FD/static/media/logo.d34513ebd032ef635aa2.png",
     "static/media/todo_completed.svg": "/Dashboard-Application-FD/static/media/todo_completed.126255ecb2b5fd2688b5689e9605fd36.svg",
     "static/media/todo_icon.svg": "/Dashboard-Application-FD/static/media/todo_icon.324c50d02775966f74df6f8d63ace6ed.svg",
     "index.html": "/Dashboard-Application-FD/index.html",
-    "main.3b8b149a.css.map": "/Dashboard-Application-FD/static/css/main.3b8b149a.css.map",
-    "main.5e8d9467.js.map": "/Dashboard-Application-FD/static/js/main.5e8d9467.js.map",
+    "main.a6bab755.css.map": "/Dashboard-Application-FD/static/css/main.a6bab755.css.map",
+    "main.9769c50f.js.map": "/Dashboard-Application-FD/static/js/main.9769c50f.js.map",
     "787.b085e314.chunk.js.map": "/Dashboard-Application-FD/static/js/787.b085e314.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b8b149a.css",
-    "static/js/main.5e8d9467.js"
+    "static/css/main.a6bab755.css",
+    "static/js/main.9769c50f.js"
   ]
 }
