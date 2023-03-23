@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme, SnackbarProvider } from "./components/index";
 import { GlobalProvider } from "./context";
@@ -14,12 +14,12 @@ root.render(
   <React.StrictMode>
     <SnackbarProvider>
       <GlobalProvider>
-        <BrowserRouter>
+        <HashRouter>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <App />
           </ThemeProvider>
-        </BrowserRouter>
+        </HashRouter>
       </GlobalProvider>
     </SnackbarProvider>
   </React.StrictMode>
