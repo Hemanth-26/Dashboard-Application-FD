@@ -6,7 +6,6 @@ import { Button } from "../../components/index";
 import { GlobalContext, actions } from "../../context";
 import AuthServices from "../../api/services/auth-services";
 import "../../assets/styles/pages/Login/Login.scss";
-import Logout from "../../utils/logout";
 
 function VerifyOtp() {
   const navigate = useNavigate();
@@ -25,7 +24,7 @@ function VerifyOtp() {
         storeHandler(actions.SHOW_LOADER, false);
         enqueueSnackbar(res.message, { variant: "success" });
         setTimeout(() => {
-          Logout();
+          navigate("/login");
         }, 1000);
       })
       .catch((err) => {
@@ -50,7 +49,7 @@ function VerifyOtp() {
 
   useEffect(() => {
     localStorage.getItem("email") === null && navigate("/register");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
