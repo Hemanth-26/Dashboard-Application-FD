@@ -10,11 +10,13 @@ function dashboardCard({ dahboardCard }) {
       title: "Todo Pending",
       icon: TodoIcon,
       value: dahboardCard?.active_todo || 0,
+      routeUrl: "/getTodos",
     },
     {
       title: "Todo Completed",
       icon: TodoCompleted,
       value: dahboardCard?.completed_todo || 0,
+      routeUrl: "/getTodos",
     },
   ];
 

@@ -8,6 +8,7 @@ import {
   CONFIRM_PASSWORD,
   DASHBOARD,
   TODOS,
+  ALL_TODOS,
   REMOVE_TODOS,
   UPDATE_TODOS,
   USER,
@@ -34,6 +35,7 @@ const AuthServices = {
 
   /** Todo Routes */
   getTodos: () => httpClient.get(TODOS).then((response) => response.data),
+  getAllTodos: () => httpClient.get(ALL_TODOS).then((response) => response.data),
   addTodos: (data) =>
     httpClient.post(TODOS, data).then((response) => response.data),
   updateTodo: (todoId, data) =>

@@ -251,9 +251,38 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           width: "100% !important",
-        }
-      }
-    }
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        head: {
+          // backgroundColor: "#1e1e24 !important",
+          // color: "#00b89f",
+          // width: '50%',
+          border: "none",
+          padding: "0.8rem 1rem",
+        },
+        body: {
+          // backgroundColor: "#1e2730",
+          // color: '#AFAFAF',
+          // width: '50%',
+          border: "none",
+          padding: "0.8rem 1rem",
+        },
+      },
+    },
+    MuiTablePagination: {
+      styleOverrides: {
+        root: {
+          // color: "#D8D8D8 !important",
+          borderBottom: "0 !important",
+        },
+        selectIcon: {
+          color: "#D8D8D8 !important",
+        },
+      },
+    },
   },
 });
 

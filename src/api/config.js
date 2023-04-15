@@ -11,6 +11,7 @@ export const DASHBOARD = "/dashboard";
 
 // Todos APIs
 export const TODOS = "/todos";
+export const ALL_TODOS = "/todos/all";
 export const REMOVE_TODOS = "/todos/remove";
 export const UPDATE_TODOS = "/todos/update";
 

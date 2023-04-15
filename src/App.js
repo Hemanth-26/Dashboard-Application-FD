@@ -15,6 +15,7 @@ import VerifyOtpPassword from "./pages/Login/VerifyOtpPassword";
 import ChangePassword from "./pages/Login/ChangePassword";
 import Dashboard from "./pages/Dashbord/Dashboard";
 import Todos from "./pages/Todos/Todos";
+import GetTodos from "./pages/TodoLists/GetTodos";
 import Profile from "./pages/Profile/Profile";
 import { Loader } from "./components";
 
@@ -83,6 +84,11 @@ function App() {
             exact
             path="/todos"
             element={PrivateRoute(Todos, PostLoginLayout)}
+          />
+          <Route
+            exact
+            path="/getTodos"
+            element={PrivateRoute(GetTodos, PostLoginLayout)}
           />
           <Route
             exact
