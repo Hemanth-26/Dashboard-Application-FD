@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Dashboard-Application-FD/static/css/main.a6bab755.css",
-    "main.js": "/Dashboard-Application-FD/static/js/main.9769c50f.js",
+    "main.css": "/Dashboard-Application-FD/static/css/main.7d9c695a.css",
+    "main.js": "/Dashboard-Application-FD/static/js/main.eba46437.js",
     "static/js/787.b085e314.chunk.js": "/Dashboard-Application-FD/static/js/787.b085e314.chunk.js",
     "static/media/Montserrat-Bold.otf": "/Dashboard-Application-FD/static/media/Montserrat-Bold.a6bc51efd33e2f7f1b95.otf",
     "static/media/Montserrat-SemiBold.otf": "/Dashboard-Application-FD/static/media/Montserrat-SemiBold.b4f6721ba1a251742ea6.otf",
@@ -12,12 +12,12 @@
     "index.html": "/Dashboard-Application-FD/index.html",
     "static/media/todo_completed.svg": "/Dashboard-Application-FD/static/media/todo_completed.126255ecb2b5fd2688b5689e9605fd36.svg",
     "static/media/todo_icon.svg": "/Dashboard-Application-FD/static/media/todo_icon.324c50d02775966f74df6f8d63ace6ed.svg",
-    "main.a6bab755.css.map": "/Dashboard-Application-FD/static/css/main.a6bab755.css.map",
-    "main.9769c50f.js.map": "/Dashboard-Application-FD/static/js/main.9769c50f.js.map",
+    "main.7d9c695a.css.map": "/Dashboard-Application-FD/static/css/main.7d9c695a.css.map",
+    "main.eba46437.js.map": "/Dashboard-Application-FD/static/js/main.eba46437.js.map",
     "787.b085e314.chunk.js.map": "/Dashboard-Application-FD/static/js/787.b085e314.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6bab755.css",
-    "static/js/main.9769c50f.js"
+    "static/css/main.7d9c695a.css",
+    "static/js/main.eba46437.js"
   ]
 }
