@@ -10,7 +10,10 @@ body {
   background-color: #EAE7DC !important;
   font-family: "Montserrat", sans-serif;
   /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 375px) {
+    font-size: 6px !important;
+  }
+  @media only screen and (min-width: 375px) and (max-width: 600px) {
     font-size: 8px !important;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */

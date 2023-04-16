@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useSnackbar } from "notistack";
 import moment from "moment";
+import Avatar from "@mui/material/Avatar";
+import IconButton from "@mui/material/IconButton";
 import { GlobalContext, actions } from "../../context";
 import AuthServices from "../../api/services/auth-services";
 import {
@@ -38,33 +40,41 @@ function Profile() {
     reValidateMode: "onChange",
   });
 
+  const [imageFile, setImageFile] = useState();
+  const [image, setImage] = useState(null);
+  const [invalidFileSize, setInvalidFileSize] = useState(false);
+
   const [userData, setUserData] = useState({
     name: "",
     gender: null,
     dob: null,
+    profileImg: null,
     // email: "",
     // password: "",
   });
 
-  const onSubmitEditDetails = () => {
-    storeHandler(actions.SHOW_LOADER, true);
-    AuthServices.editUser(userData)
-      .then((res) => {
-        storeHandler(actions.SHOW_LOADER, false);
-        enqueueSnackbar(res.message, { variant: "success" });
-      })
-      .catch((err) => {
-        storeHandler(actions.SHOW_LOADER, false);
-        enqueueSnackbar(err.data.message, { variant: "error" });
-      });
+  const addImg = (event) => {
+    const img = event.target.files[0];
+    const isValidFileSize = Number((img.size / 1024 / 1024).toFixed(4)) <= 2;
+    if (isValidFileSize) {
+      setImage(URL.createObjectURL(img));
+      setImageFile(img);
+      setInvalidFileSize(false);
+    } else {
+      setImage(null);
+      setImageFile(null);
+      setInvalidFileSize(true);
+    }
   };
 
-  useEffect(() => {
+  
+  const getUserData = () => {
     storeHandler(actions.SHOW_LOADER, true);
     AuthServices.getUser()
       .then((user) => {
         storeHandler(actions.SHOW_LOADER, false);
         localStorage.setItem("user_name", user?.name);
+        localStorage.setItem("profile_image", user?.profileImg);
         reset({
           name: user?.name,
           gender: user?.gender,
@@ -75,6 +85,7 @@ function Profile() {
           name: user?.name,
           gender: user?.gender,
           dob: moment(user?.dob).format("DD-MM-YYYY"),
+          profileImg: user?.profileImg,
         }));
         // console.log(user);
       })
@@ -82,19 +93,76 @@ function Profile() {
         storeHandler(actions.SHOW_LOADER, false);
         enqueueSnackbar(err.data.message, { variant: "error" });
       });
+  };
+
+  const onSubmitEditDetails = () => {
+    storeHandler(actions.SHOW_LOADER, true);
+    const editUserData = {
+      ...userData,
+      profileImg: !invalidFileSize ? imageFile : userData.profileImg,
+    };
+    AuthServices.editUser(editUserData)
+      .then((res) => {
+        storeHandler(actions.SHOW_LOADER, false);
+        enqueueSnackbar(res.message, { variant: "success" });
+        getUserData();
+      })
+      .catch((err) => {
+        storeHandler(actions.SHOW_LOADER, false);
+        enqueueSnackbar(err.data.message, { variant: "error" });
+      });
+  };
+
+  useEffect(() => {
+    getUserData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div>
       <HeaderTitle title="Profile" />
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={2} justifyContent="center" className="pb-4 mt-0">
         <Card variant="outlined">
           <div className="login_box">
             <form onSubmit={handleSubmit(onSubmitEditDetails)}>
               {/* <h4 className="text-center mt-2 mb-3" color="secondary">
                 Edit Profile
               </h4> */}
+
+              <div className="w-100 d-flex flex-column justify-content-center align-items-center profile-con">
+                <div
+                  className={`d-flex flex-column justify-content-between addImg mb-1`}
+                >
+                  <div className="text-center">
+                    <IconButton sx={{ p: 0 }}>
+                      <Avatar
+                        src={image ? image : userData.profileImg}
+                        alt={userData.name}
+                        className="upload"
+                      />
+                    </IconButton>
+                  </div>
+                  <label
+                    className={`txt-primary uploadTitle mb-0 py-2 d-flex align-items-center justify-content-center cursor`}
+                    // for="uploadImg"
+                  >
+                    Upload Profile Photo
+                  </label>
+                  <TextField
+                    className="uploadImg"
+                    inputProps={{
+                      type: "file",
+                      accept: "image/*",
+                      id: "uploadImg",
+                    }}
+                    onChange={addImg}
+                  />
+                </div>
+                <FormHelperText className="font-error mb-2">
+                  {invalidFileSize && "Upload Profile Image less than 2mb"}
+                </FormHelperText>
+              </div>
+
               <FormControl>
                 <Controller
                   name="name"

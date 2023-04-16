@@ -73,7 +73,7 @@ function Header({ AppBar, open, handleDrawerOpen }) {
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <Avatar
                 alt={localStorage.getItem("user_name") || "T"}
-                src="/static/images/avatar/2.jpg"
+                src={localStorage.getItem("profile_image") || null}
               />
             </IconButton>
           </Tooltip>

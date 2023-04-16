@@ -45,6 +45,7 @@ function Login() {
         // localStorage.setItem("refreshToken", res.access_token);
         localStorage.setItem("user_id", res.user_id);
         localStorage.setItem("user_name", res.userName);
+        localStorage.setItem("profile_image", res?.profileImg || null);
         localStorage.setItem("role", res.role);
         enqueueSnackbar(res.message, { variant: "success" });
         // console.log("logined", res);
